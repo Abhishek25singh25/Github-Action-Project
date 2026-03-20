@@ -4,8 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install --upgrade pip
-
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --break-system-packages --no-cache-dir --upgrade pip setuptools wheel jaraco.context
+RUN pip install --break-system-packages --no-cache-dir -r requirements.txt
 
 CMD ["python", "app.py"]
