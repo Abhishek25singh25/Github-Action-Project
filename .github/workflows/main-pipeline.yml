@@ -5,7 +5,8 @@ on:
     branches: [main]
 
 permissions:
-  contents: read    
+  contents: read  
+  security-events: write  
 
 jobs:
   build-test:
