@@ -39,8 +39,8 @@ jobs:
           password: ${{ secrets.docker_token }}
 
       - name: Build Docker Image
-        run: docker build -t ${{ inputs.image_name }}:${{ inputs.tag }} .
-
+        run: docker build --no-cache -t ${{ inputs.image_name }}:${{ inputs.tag }} .
+        
       - name: Scan Docker Image for Vulnerabilities
         uses: aquasecurity/trivy-action@master
         with:
