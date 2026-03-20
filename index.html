@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Simple App</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+
+    .box {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #22c55e;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background: #16a34a;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <h1>🚀 CI/CD Demo App</h1>
+    <p id="text">Click the button</p>
+
+    <button onclick="changeText()">Click Me</button>
+  </div>
+
+  <script>
+    function changeText() {
+      document.getElementById("text").innerText = "Pipeline is working!";
+    }
+  </script>
+
+</body>
+</html>
