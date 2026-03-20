@@ -2,6 +2,10 @@ name: Main Pipeline
 
 on:
   push:
+    branches: [main]
+
+permissions:
+  contents: read    
 
 jobs:
   build-test:
